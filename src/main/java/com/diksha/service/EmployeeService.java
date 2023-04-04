@@ -2,12 +2,15 @@ package com.diksha.service;
 
 import java.util.List;
 
-import com.diksha.dto.EmployeeDto;
+import com.diksha.entity.Employee;
 
 public interface EmployeeService {
 
-	List<EmployeeDto> searchEmployeesByProperties( Long id,
-			String firstName,
-			 String lastName,
-			Double salary);
+	List<Employee> searchEmployeesByProperties(Long id, String firstName, String lastName, Double salary);
+
+	Employee updateEmployee(Employee employee);
+
+	void addEmployee(Employee emp);
+
+	List<Employee> getAllEmployee();
 }
